@@ -1,5 +1,7 @@
 `app.py`:
 ```Python
+key = os.urandom(16)
+
 # ...
 
 @app.route('/profile')
@@ -42,6 +44,7 @@ which, when xor-decrypted, produce a string `username=[user]&admin=True`. Since 
 - By creating an account with username `imamangoo01`, we know that the `clear_text` will be `username=imamangoo01&admin=True`.
 
 - We can find `identity` by inspecting the http headers.
+
 `solve.py`:
 
 ```Python

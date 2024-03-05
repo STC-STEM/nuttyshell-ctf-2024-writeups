@@ -1,5 +1,5 @@
 In this challenge, we are given 3 files:
-- `screencap.png`:
+- `screencap.png`
 - `chall.cpython-312.pyc`
 - `output.txt`
 
@@ -7,7 +7,7 @@ In this challenge, we are given 3 files:
 
 ![screencap.png](screencap.png?raw=true "screencap.png")
 
-Since the file size of `chall.cpython-312.pyc` is quite tiny, we have decided to manually reverse it. The below shows the main procedure of the program:
+Since the file size of `chall.cpython-312.pyc` is quite small, we have decided to manually reverse it. The below shows the main procedure of the program:
 
 ```
 ...
