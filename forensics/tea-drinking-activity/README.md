@@ -11,7 +11,7 @@ It can be seen that there are 16 tracks.However, after looking at each track, th
 I decided to look at the file in hex.(https://hex-works.com/)
 ![image](https://github.com/STC-STEM/nuttyshell-ctf-2024-writeups/assets/94276358/681a36b4-e107-4980-b4b4-d8c2804dbc96)
 ![image](https://github.com/STC-STEM/nuttyshell-ctf-2024-writeups/assets/94276358/a679dbb3-8fbb-40c4-9fc5-97de96bc9d40)
-can be seen that every challenge there is a marking
+can be seen that every channel there is a marking
 ![image](https://github.com/STC-STEM/nuttyshell-ctf-2024-writeups/assets/94276358/e8ea6673-90aa-49d9-b879-66a5930b5899)
 at the bottom there is the word flag, after /.mtrk, and a bunch of stuff follows.
 I think i have to read that bunch of stuff.
