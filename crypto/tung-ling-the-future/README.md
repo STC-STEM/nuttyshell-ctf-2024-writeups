@@ -56,7 +56,7 @@ $q = s_3 - s_2$
 
 $r = s_4 - s_3$
 
-Since $s_{n+1} \equiv a * s_n + c \pmod m$
+Since $s_{n+1} \equiv as_n + c \pmod m$
 
 Therefore $s_{n+2} - s_{n+1} \equiv (s_{n+1} - s_n)a \pmod m$
 
@@ -78,9 +78,9 @@ all of which are divisible by m
 
 Recalling that the largest $s_n$ (i.e., the value of $m$) is very close to $10^19$
 
-Consider the common factor of the above numbers, we have $m = 2*2*2*2 * 191 * 959207 * 3412547641$
+Consider the common factor of the above numbers, we have $m = 2^4 * 191 * 959207 * 3412547641$
 
-Then $a \equiv p^{-1} * q \pmod m$
+Then $a \equiv p^{-1}q \pmod m$
 
 Solving the equation, we have
 
