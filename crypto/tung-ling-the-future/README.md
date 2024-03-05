@@ -41,37 +41,53 @@ The PRNG generates a random number base on the current seed, and set the generat
 Given 10 consecutive seeds, we are asked to predict the next 10 seeds.
 
 
-```
-Denote the initial seed as s0, and the subsequent seeds generated as s1, s2, ...
-After a few trials, we will notice that the largest s_n is very close to 10*19
 
-We only have to consider 4 consecutive seeds. Let pick s1, s2, s3 and s4
+Denote the initial seed as $s_0$, and the subsequent seeds generated as $s_1$, $s_2$, ...
+
+After a few trials, we will notice that the largest $s_n$ is very close to $10^{19}$
+
+We only have to consider 4 consecutive seeds. Let pick $s_1$, $s_2$, $s_3$ and $s_4$
+
 For convenience, we'll be using these variables
-p = seed[2] - seed[1]
-q = seed[3] - seed[2]
-r = seed[4] - seed[3]
 
-Since  s_(n+1) ≡ a * s_n + c (mod m)
-Therefore s_(n+2) - s_(n+1) ≡ (s_(n+1) - s_n) a
-q = pa (mod m)
-r = qa (mod m)
-Cross multiplying, we have (q^2 - pr) | m
+$p = s_2 - s_1$
+
+$q = s_3 - s_2$
+
+$r = s_4 - s_3$
+
+Since $s_{n+1} \equiv a * s_n + c \pmod m$
+
+Therefore $s_{n+2} - s_{n+1} \equiv (s_{n+1} - s_n)a \pmod m$
+
+$q \equiv pa \pmod m$
+
+$r \equiv qa \pmod m$
+
+Cross multiplying, we have $(q^2 - pr) \mid m$
 
 With a few trials
-60681367337024189986701450616061524848 = 2^4 × 3 × 7^2 × 191 × 959207 × 3412 547641 × 41266 117556 007997
-39640735732326914687871304305465235424 = 2^5 × 191 × 277 × 959207 × 3412 547641 × 7152 988539 803923
-28275749127143381290655390330303517184 = 2^9 × 11^2 × 191 × 599 × 163643 × 959207 × 7 447493 × 3412 547641
+
+$(q^2 - pr) = 60681367337024189986701450616061524848 = 2^4 × 3 × 7^2 × 191 × 959207 × 3412547641 × 41266117556007997$
+
+$(q^2 - pr) = 39640735732326914687871304305465235424 = 2^5 × 191 × 277 × 959207 × 3412547641 × 7152988539803923$
+
+$(q^2 - pr) = 28275749127143381290655390330303517184 = 2^9 × 11^2 × 191 × 599 × 163643 × 959207 × 7447493 × 3412547641$
+
 all of which are divisible by m
 
-Recalling that the largest s_n (i.e., the value of m) is very close to 10**19
-Consider the common factor of the above numbers, we have
-m = 2*2*2*2 * 191 * 959207 * 3412547641
+Recalling that the largest $s_n$ (i.e., the value of $m$) is very close to $10^19$
 
-Then a ≡ p^(-1) * q (modulo m)
-we have:
-a = 2217558108606715201
-c = 8407371931683985347
-```
+Consider the common factor of the above numbers, we have $m = 2*2*2*2 * 191 * 959207 * 3412547641$
+
+Then $a \equiv p^{-1} * q \pmod m$
+
+Solving the equation, we have
+
+$a = 2217558108606715201$
+
+$c = 8407371931683985347$
+
 
 After knowing the value of `a` and `c`, we can solve the challenge easily.
 
